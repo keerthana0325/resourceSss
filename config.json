@@ -1,0 +1,13 @@
+{
+    "params" : 
+    {
+        "local_server" : "True",
+        "local_uri" : "mysql+mysqlconnector://root:@localhost/resourcesharing",
+        "prod_uri" : "mysql+mysqlconnector://root:@localhost/resourcesharing",
+        "fb_url" : "https://facebook.com/resourcesharing",
+        "tw_url" : "https://twitter.com/resourcesharing",
+        "gh_url" : "https://github.com/resourcesharing",
+        "gmail_user" : "22r21a05k9@mlrit.ac.in",
+        "gmail_pass" : "bcxp sjot gewd dsnf"
+    }
+}
