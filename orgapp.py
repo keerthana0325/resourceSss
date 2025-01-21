@@ -52,10 +52,21 @@ def hello():
 def about():
     return render_template("about.html", params=params)
 
+#n3xt commit
+
+@app.route("/dashboard" , methods = ['GET' , 'POST'])
+def dashboard():
+    if request.method =='POST':
+        pass
+        #redirect to admin portal
+    else:
+
+       return render_template("dashboard.html", params=params)
+
 @app.route("/post/<string:post_slug>",methods=['GET'])
 def postfunc(post_slug):
     post = Posts.query.filter_by(slug=post_slug).first()
-   #print(f"Requested Slug: {post_slug}")
+   # print(f"Requested Slug: {post_slug}")
 
     return render_template("post.html", params=params , post=post)
 
