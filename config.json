@@ -7,9 +7,14 @@
         "fb_url" : "https://facebook.com/resourcesharing",
         "tw_url" : "https://twitter.com/resourcesharing",
         "gh_url" : "https://github.com/resourcesharing",
+<<<<<<< HEAD
         "gmail_user" : "22r21a05k9@mlrit.ac.in",
         "gmail_pass" : "bcxp sjot gewd dsnf",
         "about_text" : "ABOUT US??",
         "no_of_posts" : 5
+=======
+        "gmail_user" : "your mail",
+        "gmail_pass" : "apppassword"
+>>>>>>> 88e8cc8203237df2e7b17d838452ee7fbf486c76
     }
 }
