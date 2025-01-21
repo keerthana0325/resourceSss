@@ -33,17 +33,31 @@ class Contacts(db.Model):
     phone = db.Column(db.String(120), unique=True, nullable=False)
     message = db.Column(db.String(120), unique=False, nullable=False)
 
+class Posts(db.Model):
+    sno = db.Column(db.Integer, primary_key=True)
+    resource_name = db.Column(db.String(80), unique=False, nullable=False)
+    subheading = db.Column(db.String(80), unique=False, nullable=False)
+    description = db.Column(db.String(120), unique=False, nullable=False)
+    shared_by = db.Column(db.String(120), unique=False, nullable=False)
+    date = db.Column(db.String(120), unique=False, nullable=False)
+    slug = db.Column(db.String(120), unique=False, nullable=False)
+    img_file = db.Column(db.String(120), unique=False, nullable=False)
+
 @app.route("/")
 def hello():
-    return render_template("index.html", params=params)
+    posts = Posts.query.filter_by().all()
+    return render_template("index.html", params=params , posts=posts)
 
 @app.route("/about")
 def about():
     return render_template("about.html", params=params)
 
-@app.route("/post")
-def post():
-    return render_template("post.html", params=params)
+@app.route("/post/<string:post_slug>",methods=['GET'])
+def postfunc(post_slug):
+    post = Posts.query.filter_by(slug=post_slug).first()
+   #print(f"Requested Slug: {post_slug}")
+
+    return render_template("post.html", params=params , post=post)
 
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():
