@@ -35,9 +35,15 @@
             <hr class="my-4" />
             {% endfor %}
             <!-- Pager -->
-            <div class="d-flex justify-content-end mb-4">
-                <a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a>
+            <!-- Pager -->
+            <div class="d-flex justify-content-between">
+             {% if number != 0 %}
+            <a class="btn btn-primary float left" href="{{prev}}">&larr; Older Posts</a>
+             {% endif %}
+            <a class="btn btn-primary float-right" href="{{next}}">Newer Posts &rarr;</a>
             </div>
+
+
         </div>
     </div>
 </div>
